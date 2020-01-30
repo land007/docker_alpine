@@ -13,10 +13,7 @@ ENV LANG=en_US.UTF-8 \
     LC_CTYPE=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
 RUN ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-ADD check.sh / \
-	analytics.sh / \
-	start.sh / \
-	task.sh /
+ADD *.sh /
 RUN sed -i 's/\r$//' /*.sh ; chmod +x /*.sh && \
 	echo $(date "+%Y-%m-%d_%H:%M:%S") >> /.image_times && \
 	echo $(date "+%Y-%m-%d_%H:%M:%S") > /.image_time && \
