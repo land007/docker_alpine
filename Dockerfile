@@ -3,7 +3,7 @@ FROM alpine:latest
 MAINTAINER Yiqiu Jia <yiqiujia@hotmail.com>
 
 RUN apk --no-cache --no-progress upgrade && \
-    apk --no-cache --no-progress add bash tar net-tools vim curl wget unzip screen git subversion && \
+    apk --no-cache --no-progress add bash tar net-tools vim curl wget unzip screen util-linux git subversion && \
 	rm -rf /var/cache/apk/*
 
 
